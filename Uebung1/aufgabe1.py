@@ -1,4 +1,5 @@
 from math import ceil 
+import numpy as np
 
 # initial values for a,b,c
 a=3
@@ -13,6 +14,9 @@ while odd_counter <= 77:
     c[i] = odd_counter
     odd_counter += 2
     i += 1
+
+#!! richtige lösung!
+c = np.arange(1, 77+2, 2)
 
 # write the values of b and c to a file
 filename = "test.npz"
