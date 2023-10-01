@@ -1,20 +1,26 @@
-from matplotlib import pyplot as plt
-from scipy import io as sio
-from scipy import interpolate as sint
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.io import loadmat
 import pandas as pd
-# import numpy as np
+import scipy.interpolate as sci
 
-
+# Load data from the mat file as dataframe
 filename = "mkl.mat"
-file = sio.loadmat(filename, struct_as_record=False, squeeze_me=True)
-x_value = file["x_werte"]
-y_value = file["y_werte"]
-data = [x_value, y_value]
+file = loadmat(filename, squeeze_me=True)
+data_df = pd.DataFrame({'x': file["x_werte"], 'y': file["y_werte"]})
 
-data_df = pd.DataFrame(data=data).transpose()
-# plt.plot(data_df[0], data_df[1], "o")
+# Create a spline interpolation
+s = 5
+spline = sci.splrep(data_df['x'], data_df['y'], s=s)
+spline_x = np.arange(0, 1.5, 0.01)
+spline_eval = sci.splev(spline_x, spline)
+# spline_3d = sci.CubicSpline(data_df['x'], data_df['y'])
 
-spline = sint.CubicSpline(data_df[0], data_df[1])
-plt.plot(data_df[0], spline(data_df[0]))
+# Plot the original data and the spline interpolation
+plt.plot(data_df['x'], data_df['y'], 'o', label='Original Data')
+plt.plot(spline_x, spline_eval, label='One-Dimensional Spline Interpolation')
+# plt.plot(data_df['x'], spline_3d(data_df['x'], 0), label='Cubic Spline Interpolation')
 
+# Show the plot
+plt.legend()
 plt.show()
