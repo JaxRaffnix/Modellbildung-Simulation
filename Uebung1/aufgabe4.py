@@ -6,8 +6,8 @@ import scipy.interpolate as sci
 
 # Load data from the mat file as dataframe
 filename = "mkl.mat"
-file = loadmat(filename, squeeze_me=True)
-data_df = pd.DataFrame({'x': file["x_werte"], 'y': file["y_werte"]})
+with loadmat(filename, squeeze_me=True) as file:
+    data_df = pd.DataFrame({'x': file["x_werte"], 'y': file["y_werte"]})
 
 # Create a spline interpolation
 s = 5
