@@ -4,6 +4,7 @@
         "contourf",
         "rsme",
         "splev",
-        "splrep"
+        "splrep",
+        "zlabel"
     ]
 }
