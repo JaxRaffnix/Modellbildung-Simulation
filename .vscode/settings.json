@@ -6,5 +6,6 @@
         "splev",
         "splrep",
         "zlabel"
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "basic"
 }
