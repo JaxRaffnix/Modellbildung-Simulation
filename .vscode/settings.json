@@ -2,6 +2,7 @@
     "cSpell.words": [
         "arange",
         "contourf",
+        "ndarray",
         "rsme",
         "splev",
         "splrep",
