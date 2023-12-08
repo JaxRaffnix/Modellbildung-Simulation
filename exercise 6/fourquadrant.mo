@@ -1,4 +1,4 @@
-model four-quadrant-digits
+model fourquadrant
   import SI = Modelica.SIunits;
   parameter SI.Time T_p = 5e-3;
   parameter SI.Frequency f = 50;
@@ -39,7 +39,6 @@ equation
   connect(resistor1.n, inductor1.p) annotation(
     Line(points = {{34, 40}, {66, 40}, {66, 40}, {66, 40}}, color = {0, 0, 255}));
   annotation(
-    uses(Modelica(version = "3.2.2")),
     experiment(StartTime = 0, StopTime = 15e-3, Tolerance = 1e-06, Interval = 3.75e-05),
     Diagram(coordinateSystem(initialScale = 0.1)));
-end four-quadrant-digits;
+end fourquadrant;
