@@ -5,7 +5,7 @@ model blockdiagram
     Placement(visible = true, transformation(origin = {26, 18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   Modelica.Electrical.Analog.Basic.Inductor inductor1(L = 9e-3, i(start = 0))  annotation(
     Placement(visible = true, transformation(origin = {48, 18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage1(V = 2, freqHz = 1)  annotation(
+  Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage1(V = 2)  annotation(
     Placement(visible = true, transformation(origin = {-48, 18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   Modelica.Electrical.Analog.Basic.Ground ground1 annotation(
     Placement(visible = true, transformation(origin = {-48, -8}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));

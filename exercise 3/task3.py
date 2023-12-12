@@ -1,2 +1,0 @@
-from OMPython import ModelicaSystem
-
