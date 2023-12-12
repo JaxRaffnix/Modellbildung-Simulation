@@ -17,7 +17,7 @@ model fourquadrantsinus
     Placement(visible = true, transformation(origin = {-70, -66}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Math.Add add1 annotation(
     Placement(visible = true, transformation(origin = {-34, -18}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage(V = 200, freqHz = 0.0032) annotation(
+  Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage(V = 200, freqHz = 200) annotation(
     Placement(visible = true, transformation(origin = {-80, 30}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
 equation
   connect(step2.y, add1.u2) annotation(
