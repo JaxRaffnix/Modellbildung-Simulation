@@ -52,7 +52,10 @@ mod.setSimulationOptions('stopTime=30.0') #unnötig?
 mod.simulate()
 [v_mo]=mod.getSolutions('v')
 [h_mo]=mod.getSolutions('h')
-delete_OM_files(modelname)
+# delete_OM_files(modelname)
+
+h_mo = h_mo[0:100]     # slice array for fist 100 entries
+v_mo = v_mo[0:100]
 #----------------------------------------------- 
 
 fig=plt.figure(1, figsize=(10,6)); fig.clf()
