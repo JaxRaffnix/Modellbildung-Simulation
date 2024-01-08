@@ -3,9 +3,9 @@ model A4
   parameter SI.Time T_p = 5e-3;
   parameter SI.Frequency f = 50;
   parameter SI.Voltage u_dach = 200;
-  Modelica.Electrical.Analog.Basic.Inductor inductor1(i(fixed = true, start = 20)) annotation(
+  Modelica.Electrical.Analog.Basic.Inductor inductor1(L = 0.01, i(fixed = true, start = 20)) annotation(
     Placement(visible = true, transformation(origin = {66, 30}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor1 annotation(
+  Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 1)  annotation(
     Placement(visible = true, transformation(origin = {24, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Electrical.Analog.Basic.Ground ground1 annotation(
     Placement(visible = true, transformation(origin = {-80, -12}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 #from numpy import pi as pi
 from scipy.integrate import solve_ivp
 from OMPython import ModelicaSystem
-from help_fkt import delete_OM_files
+# from help_fkt import delete_OM_files
 
 t_max=3;
 v_0=5;
@@ -53,7 +53,7 @@ mod.simulate()
 [v_mo]=mod.getSolutions('v')
 [h_mo]=mod.getSolutions('h')
 [t_vec_mo]=mod.getSolutions('time')
-delete_OM_files(modelname)
+# delete_OM_files(modelname)
 #----------------------------------------------- 
 
 fig=plt.figure(1, figsize=(10,6)); fig.clf()
@@ -70,3 +70,5 @@ ax.set_ylabel('Geschwindigkeit')
 ax.legend(loc='best')
 ax.set_xlabel('t')
 ax.grid()
+
+ax.plot()
